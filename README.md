@@ -1,4 +1,4 @@
-# Pipeline de extração de Linguagens de Programação de repositórios Github
+# Pipeline de extração de linguagens de programação de repositórios Github
 
 Esse projeto implementa um pipeline de dados em Python, usando Programação Orientada a Objetos (POO), para extrair dados das principais linguagens de programação utilizadas por grandes empresas. Entre as empresas analisadas, estão Amazon, Spotify, Netflix, Discord, entre outras. O pipeline foi desenvolvido para extrair dados diretamente dos perfis dessas empresas no GitHub, mas é um pipeline flexível que pode ser utilizado para extrair dados de qualquer perfil.
 
