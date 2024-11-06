@@ -28,8 +28,8 @@ Projeto desenvolvido durante a formação de Engenharia de Dados da Alura, com p
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seu_usuario/seu_projeto.git
-   cd seu_projeto
+   git clone https://github.com/juliana-vieira/pipeline_dados_requests.git
+   cd pipeline_dados_requests
 
 2. **Configuração do Token de Acesso**:
    Para evitar limitações de taxa ao acessar a API do GitHub, é recomendável configurar um token de acesso pessoal.
