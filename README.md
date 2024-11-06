@@ -58,7 +58,7 @@ for company in company_list:
 
     dados = DadosRepositorios(company) # Extrai os dados consumindo a API do Github
     dados.to_dataframe() # Transforma os dados para um DataFrame pandas
-    dados.load() # Salva o arquivo em CSV na pasta "data"
+    dados.save_csv() # Salva o arquivo em CSV na pasta "data"
 ```
 
 O código acima irá criar um arquivo CSV para cada perfil listado em `company_list`, contendo os dados das principais linguagens de programação utilizadas por cada empresa, e salvar esses arquivos na pasta "data".
