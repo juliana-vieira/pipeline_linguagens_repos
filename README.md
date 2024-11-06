@@ -1,4 +1,4 @@
-# Data Pipeline de Linguagens de Programação
+# Pipeline de extração de Linguagens de Programação de repositórios Github
 
 Esse projeto implementa um pipeline de dados em Python, usando Programação Orientada a Objetos (POO), para extrair dados das principais linguagens de programação utilizadas por grandes empresas. Entre as empresas analisadas, estão Amazon, Spotify, Netflix, Discord, entre outras. O pipeline foi desenvolvida para extrair dados diretamente dos perfis dessas empresas no GitHub, mas é um pipeline flexível que pode ser utilizado para extrair dados de qualquer perfil.
 
@@ -58,10 +58,10 @@ for company in company_list:
 
     dados = DadosRepositorios(company) # Extrai os dados consumindo a API do Github
     dados.to_dataframe() # Transforma os dados para um DataFrame pandas
-    dados.load() # Salva o arquivo em CSV
+    dados.load() # Salva o arquivo em CSV na pasta "data"
 ```
 
-O código acima irá criar um arquivo CSV para cada perfil listado em `company_list`, contendo os dados das principais linguagens de programação utilizadas por cada empresa.
+O código acima irá criar um arquivo CSV para cada perfil listado em `company_list`, contendo os dados das principais linguagens de programação utilizadas por cada empresa, e salvar esses arquivos na pasta "data".
 
 A clase DadosRepositorios possui todos os métodos necessários para extrair os dados, transformá-los e salvá-los dentro do contexto do negócio.
 
