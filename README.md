@@ -56,7 +56,7 @@ company_list = ["amzn", "netflix", "spotify", "discord"]
 
 for company in company_list:
 
-    dados = DadosRepositorios(company) # Extrai os dados consumindo a API do Github
+    dados = DadosRepositorios(company) # Cria um objeto da classe DadosRepositorios, que possui os métodos de extração de dados consumindo a API do Github
     dados.to_dataframe() # Transforma os dados para um DataFrame pandas
     dados.save_csv() # Salva o arquivo em CSV na pasta "data"
 ```
