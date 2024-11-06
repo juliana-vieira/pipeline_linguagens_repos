@@ -1,6 +1,6 @@
 from processamento import DadosRepositorios
 
-company_list = ['juliana-vieira']
+company_list = ['amzn', 'apple', 'discord', 'netflix', 'spotify']
 
 for company in company_list:
 
