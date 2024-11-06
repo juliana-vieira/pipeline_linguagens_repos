@@ -1,13 +1,12 @@
 from processamento import DadosRepositorios
 
-# Extract
-company_list = ['amzn', 'Netflix', 'spotify', 'apple']
+company_list = ['discord']
 
 for company in company_list:
 
-    dados = DadosRepositorios(company)
-    dados.to_dataframe()
-    dados.load()
+    dados = DadosRepositorios(company) # Extract
+    dados.to_dataframe() # Transform
+    dados.load() # Load
 
 
 
