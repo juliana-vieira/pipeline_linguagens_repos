@@ -6,7 +6,7 @@ for company in company_list:
 
     dados = DadosRepositorios(company) # Extract
     dados.to_dataframe() # Transform
-    dados.load() # Load
+    dados.save_csv() # Load
 
 
 

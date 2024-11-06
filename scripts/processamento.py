@@ -101,7 +101,7 @@ class DadosRepositorios(ClienteAPI):
         except Exception as e:
             print(e)
 
-    def load(self):
+    def save_csv(self):
 
         # Método que salva o dataframe gerado em um arquivo csv na pasta "data"
         # Caso haja um erro, o erro será printado no console
