@@ -35,15 +35,21 @@ class DadosRepositorios(ClienteAPI):
 
         while True:
             try:
-                url_page = f"{self.api_base_url}/users/{self.owner}/repos?page={page}"
+                url_page = f"{self.api_base_url}/users/{self.owner}/repos?page={page}&per_page=30"
                 response = requests.get(url_page, headers = self.headers)
                 repos = response.json()
 
-                if len(repos) == 0:
+                if not repos:
                     break
 
                 repos_list.append(repos)
-                page += 1
+
+                link_header = response.headers.get("Link")
+                
+                if link_header and 'rel="next"' in link_header:
+                    page_num += 1 
+                else:
+                    break
 
             except Exception as e:
                 print(e)
