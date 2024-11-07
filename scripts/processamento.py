@@ -28,7 +28,7 @@ class DadosRepositorios(ClienteAPI):
     def __read_repos(self):
 
         # Método que percorre todas as páginas de repositórios da empresa especificada em "owner", armazena em uma lista e a retorna
-        # O laço é interrompido quando o json recebido tem o tamanho 0, ou quando um erro é encontrado
+        # O laço é interrompido quando não há mais repositórios ou quando não há mais páginas (verificação feita pela varíavel link_header e o parâmetro "rel=next" do header da resposta)
 
         repos_list = []
         page = 1
@@ -45,7 +45,7 @@ class DadosRepositorios(ClienteAPI):
                 repos_list.append(repos)
 
                 link_header = response.headers.get("Link")
-                
+
                 if link_header and 'rel="next"' in link_header:
                     page_num += 1 
                 else:
