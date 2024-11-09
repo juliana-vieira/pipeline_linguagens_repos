@@ -5,12 +5,12 @@ Esse projeto implementa um pipeline de dados em Python, usando Programação Ori
 Projeto desenvolvido durante a formação de Engenharia de Dados da Alura, com pequenas modificações para otimizar a automação do processo de ETL.
 
 ## Tabela de Conteúdos
-- [Funcionalidades](#funcionalidades)
+- [Características](#características)
 - [Requisitos](#requisitos)
 - [Configuração e Uso](#configuração-e-uso)
 - [Exemplo de Uso](#exemplo-de-uso)
 
-## Funcionalidades
+## Características
 
 - Extrai dados sobre as linguagens de programação mais usadas em cada repositório público de perfis do GitHub.
 - Flexível e extensível: basta informar o nome de usuário do GitHub para extrair dados de qualquer perfil.
