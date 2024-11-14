@@ -8,7 +8,7 @@ class ClienteAPI:
 
     def __init__(self):
         self.__api_base_url = 'https://api.github.com'
-        self.__headers = {'Authorization' : 'Bearer ' + self._get_access_token, 
+        self.__headers = {'Authorization' : 'Bearer ' + self.__get_access_token(), 
                             'X-Github-Api-Version': '2022-11-28'}   
     @property
     def _get_api_base_url(self):
@@ -18,8 +18,7 @@ class ClienteAPI:
     def _get_headers(self):
         return self.__headers
     
-    @property
-    def _get_access_token(self):
+    def __get_access_token(self):
         load_dotenv()
         access_token = os.getenv("GITHUB_TOKEN")
 
@@ -78,7 +77,7 @@ class DadosRepositorios(ClienteAPI):
                 link_header = response.headers.get("Link")
 
                 if link_header and 'rel="next"' in link_header:
-                    page_num += 1 
+                    page += 1 
                 else:
                     break
 
